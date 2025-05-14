@@ -1,5 +1,6 @@
 from fastapi import FastAPI, File, UploadFile
 from fastapi.responses import JSONResponse, HTMLResponse
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 import tensorflow as tf
 from PIL import Image
@@ -10,6 +11,12 @@ import base64
 
 app = FastAPI()
 
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Adjust for production
+    allow_methods=["POST"],
+)
 
 # Serve static files (CSS, JS)
 app.mount("/static", StaticFiles(directory="frontend/static"), name="static")

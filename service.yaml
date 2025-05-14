@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: health-leaf-classifier-service
+spec:
+  type: NodePort # Makes the service accessible outside the cluster
+  selector:
+    app: health-leaf-classifier
+  ports:
+    - protocol: TCP
+      port: 7000 # Service port
+      targetPort: 7000 # Container port
+      nodePort: 31000 # Access port (30000-32767)

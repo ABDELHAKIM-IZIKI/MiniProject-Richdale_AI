@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: health-leaf-classifier-deployment
+spec:
+  replicas: 1 # Number of pods
+  selector:
+    matchLabels:
+      app: health-leaf-classifier
+  template:
+    metadata:
+      labels:
+        app: health-leaf-classifier
+    spec:
+      containers:
+        - name: health-leaf-classifier
+          image: health-leaf-classifier:1.0
+          imagePullPolicy: Never # Use local image
+          ports:
+            - containerPort: 7000 # Match your API port (FastAPI)

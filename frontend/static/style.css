@@ -1,0 +1,199 @@
+/* Base styles */
+body {
+  background-color: #f3f4f6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #4ade80;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1rem;
+}
+
+/* Prediction container */
+.prediction-container {
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 28rem;
+  margin-bottom: 2.5rem;
+}
+
+.prediction-container h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Drop zone */
+#dropZone {
+  border: 2px dashed #9ca3af;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  background-color: #f3f4f6;
+  transition: all 0.3s ease;
+}
+
+#dropZone.drag-over {
+  background-color: #e5e7eb;
+}
+
+/* Upload button */
+.upload-button {
+  background-color: #22c55e;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-button:hover {
+  background-color: #16a34a;
+}
+
+/* Prediction results */
+.prediction-result {
+  margin-top: 1.5rem;
+}
+
+.prediction-result.hidden {
+  display: none;
+}
+
+.result-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.result-item {
+  margin-bottom: 0.5rem;
+}
+
+.result-value {
+  font-weight: bold;
+}
+
+.result-image {
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  height: auto;
+}
+
+/* About section */
+.about-section {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 56rem;
+}
+
+.about-section h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.about-section p {
+  margin-bottom: 0.5rem;
+}
+
+/* Steps container */
+.steps-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .steps-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.step {
+  background-color: #f3f4f6;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.step-title {
+  font-weight: 600;
+}
+
+/* Footer */
+footer {
+  background-color: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Utility classes */
+.hidden {
+  display: none;
+}
+
+footer {
+  background-color: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.footer-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: white;
+  text-decoration: none;
+}
+
+.github-link:hover {
+  text-decoration: underline;
+}
+
+.separator {
+  margin: 0 0.3rem;
+}

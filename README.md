@@ -1,0 +1,1 @@
+# MiniProject-Richdale_AI

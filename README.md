@@ -1,8 +1,12 @@
 # Mini Project : Richdale AI Summer Internship test
 
-# 🌿 Health Leaf Classifier
+## 🌿 A bref about Health Leaf Classifier
 
 A **FastAPI** web service for classifying healthy and diseased leaves using **MobileNetV1**, containerized with **Docker** and deployed on **Kubernetes** (**Minikube**).
+
+## Training Model with MobileNetV1
+
+The source code for training the model is located in: [Train_Model/Train_Model_with_MobileNetV1.ipynb](Train_Model/Train_Model_with_MobileNetV1.ipynb)
 
 ## Available URLs
 

@@ -94,7 +94,7 @@ kubectl apply -f service.yml
 3. Start the service:
 
 ```bash
-minikube service health-leaf-classifier
+minikube service health-leaf-classifier-service
 ```
 
 ### Verification
@@ -136,7 +136,7 @@ kubectl rollout restart deployment health-leaf-classifier
 1. Start the service:
 
 ```bash
-minikube service health-leaf-classifier
+minikube service health-leaf-classifier-service
 ```
 
 2. Set up port forwarding (if needed):

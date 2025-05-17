@@ -126,7 +126,7 @@ kubectl get hpa
 ```
 Monitor autoscaling behavior:
 ```bash
-watch kubectl get hpa
+kubectl get hpa
 ```
 View detailed HPA status:
 ```bash

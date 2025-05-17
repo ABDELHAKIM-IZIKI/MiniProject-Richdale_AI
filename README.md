@@ -123,18 +123,6 @@ Apply the HPA configuration:
 kubectl apply -f hpa.yml
 ```
 
-Enable metrics-server:
-
-```bash
-minikube addons enable metrics-server
-```
-
-Restart the metrics-server (if needed):
-
-```bash
-kubectl rollout restart deployment metrics-server -n kube-system
-```
-
 Monitor autoscaling behavior:
 
 ```bash

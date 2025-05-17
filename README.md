@@ -115,6 +115,32 @@ To scale the deployment:
 kubectl scale deployment --replicas=5 health-leaf-classifier-deployment
 ```
 
+### HPA Configuration
+Apply the HPA configuration:
+```bash
+kubectl apply -f hpa.yml
+```
+Verify HPA is running:
+```bash
+kubectl get hpa
+```
+Monitor autoscaling behavior:
+```bash
+watch kubectl get hpa
+```
+View detailed HPA status:
+```bash
+kubectl describe hpa health-leaf-classifier-hpa
+```
+### Testing Autoscaling
+
+Watch scaling in action:
+```bash
+kubectl get pods -w
+```
+
+
+
 ## Important Notes
 
 ⚠️ **After making changes to the application:**

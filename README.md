@@ -129,8 +129,6 @@ Monitor autoscaling behavior:
 kubectl get hpa --watch
 ```
 
-kubectl top pods
-
 ### Testing Autoscaling
 
 Watch scaling in action:

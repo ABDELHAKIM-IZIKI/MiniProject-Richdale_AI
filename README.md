@@ -112,7 +112,7 @@ kubectl get service
 To scale the deployment:
 
 ```bash
-kubectl scale deployment --replicas=5 health-leaf-classifier
+kubectl scale deployment --replicas=5 health-leaf-classifier-deployment
 ```
 
 ## Important Notes
@@ -128,7 +128,7 @@ docker build -t health-leaf-classifier:1.0 .
 2. Restart the deployment:
 
 ```bash
-kubectl rollout restart deployment health-leaf-classifier
+kubectl rollout restart deployment health-leaf-classifier-deployment
 ```
 
 ⚠️ **To use the application:**

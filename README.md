@@ -116,38 +116,40 @@ kubectl scale deployment --replicas=5 health-leaf-classifier-deployment
 ```
 
 ### HPA Configuration
+
 Apply the HPA configuration:
+
 ```bash
 kubectl apply -f hpa.yml
 ```
+
 Enable metrics-server:
+
 ```bash
 minikube addons enable metrics-server
 ```
+
 Restart the metrics-server (if needed):
+
 ```bash
 kubectl rollout restart deployment metrics-server -n kube-system
 ```
-Verify HPA is running:
-```bash
-kubectl get hpa
-```
+
 Monitor autoscaling behavior:
+
 ```bash
-kubectl get hpa
+kubectl get hpa --watch
 ```
-View detailed HPA status:
-```bash
-kubectl describe hpa health-leaf-classifier-hpa
-```
+
+kubectl top pods
+
 ### Testing Autoscaling
 
 Watch scaling in action:
+
 ```bash
 kubectl get pods -w
 ```
-
-
 
 ## Important Notes
 
